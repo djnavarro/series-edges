@@ -225,7 +225,7 @@ art_generator <- function(seed) {
   if (runif(1) < .5) {
     hex_xloc <- seq(-5, 5, length.out = n)
   } else {
-    hex_xloc <- rnorm(n, 0, 2.25)
+    hex_xloc <- 15 * (rbeta(n, 3, 3) - .5)
   }
   if (runif(1) < .75) {
     hex_yloc <- runif(n, -.1, .1)
